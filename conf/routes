@@ -4,7 +4,7 @@
 
 # An example controller showing a sample home page
 
-GET     /                     controllers.HomeController.index(name: String ?="visitor")
+GET     /                     controllers.HomeController.index()
 
 GET     /about                      controllers.HomeController.about
 
@@ -25,6 +25,12 @@ GET	    /updateProduct/:id			controllers.HomeController.updateProduct(id: Long)
 
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
+
+# An example controller showing how to use dependency injection
+GET     /login                      controllers.LoginController.login
+GET     /logout                     controllers.LoginController.logout
+POST    /loginSubmit                controllers.LoginController.loginSubmit
+
 # An example controller showing how to write asynchronous code
 GET     /message                    controllers.AsyncController.message
 
